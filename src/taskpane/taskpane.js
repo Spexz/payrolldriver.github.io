@@ -26,6 +26,8 @@ Office.onReady((info) => {
 
     document.getElementById("pay-run-date").valueAsDate = new Date();
 
+    console.log("in");
+
     createDropDown();
 
     document.getElementById("sideload-msg").style.display = "none";
