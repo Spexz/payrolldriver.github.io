@@ -73,7 +73,7 @@
       </bt:Urls>
       <bt:ShortStrings>
         <bt:String id="GetStarted.Title" DefaultValue="Get started with the Payroll Driver add-in!"/>
-        <bt:String id="CommandsGroup.Label" DefaultValue="Commands Group"/>
+        <bt:String id="CommandsGroup.Label" DefaultValue="Payroll Driver Group"/>
         <bt:String id="TaskpaneButton.Label" DefaultValue="Show Payroll Driver"/>
       </bt:ShortStrings>
       <bt:LongStrings>
