@@ -163,6 +163,13 @@ header {
     width: 100%;
     height: 60px;
     background-color: #008CBA;
+    align-items: center;
+    justify-content: center;
+}
+
+header h1 {
+    color: #fff;
+    align-items: center;
 }
 
 .log {
