@@ -5,18 +5,23 @@
 
 /* global console, document, Excel, Office */
 
-const POPUP_ADDRESS = "https://localhost:3000/confirm-popup.html";
+// const POPUP_ADDRESS = "https://localhost:3000/confirm-popup.html";
+const POPUP_ADDRESS =
+  "https://spexz.github.io/payrolldriver.github.io/src/dialogs/confirm-popup.html";
 let dialog = null;
 
 Office.onReady((info) => {
   if (info.host === Office.HostType.Excel) {
     // Determine if the user's version of Office supports all the Office.js APIs that are used in the tutorial.
     if (!Office.context.requirements.isSetSupported("ExcelApi", "1.7")) {
-      console.log("Sorry. The add-in uses Excel.js APIs that are not available in your version of Office.");
+      console.log(
+        "Sorry. The add-in uses Excel.js APIs that are not available in your version of Office."
+      );
     }
 
     // Assign event handlers and other initialization logic.
-    document.getElementById("log-preview-btn").onclick = logPreviewConfirmDialog;
+    document.getElementById("log-preview-btn").onclick =
+      logPreviewConfirmDialog;
     document.getElementById("log-time-btn").onclick = logTimeConfirmDialog;
 
     document.getElementById("pay-run-date").valueAsDate = new Date();
@@ -110,8 +115,13 @@ async function logPreview() {
     // let paygroup = "GB8";
     // let id = paygroup + m + d + y;
 
-    let IDRng = driverTable.columns.getItem("ID").getDataBodyRange().load("values");
-    let targetHeaderRng = driverTable.columns.getItem(targetHeader).getDataBodyRange();
+    let IDRng = driverTable.columns
+      .getItem("ID")
+      .getDataBodyRange()
+      .load("values");
+    let targetHeaderRng = driverTable.columns
+      .getItem(targetHeader)
+      .getDataBodyRange();
 
     await context.sync();
 
@@ -173,8 +183,13 @@ async function logTime() {
     let m = new Intl.DateTimeFormat("en", { month: "2-digit" }).format(dt);
     let d = new Intl.DateTimeFormat("en", { day: "2-digit" }).format(dt);
 
-    let IDRng = driverTable.columns.getItem("ID").getDataBodyRange().load("values");
-    let targetHeaderRng = driverTable.columns.getItem(targetHeader).getDataBodyRange();
+    let IDRng = driverTable.columns
+      .getItem("ID")
+      .getDataBodyRange()
+      .load("values");
+    let targetHeaderRng = driverTable.columns
+      .getItem(targetHeader)
+      .getDataBodyRange();
 
     await context.sync();
 
